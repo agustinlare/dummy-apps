@@ -1,0 +1,6 @@
+.old/
+.vscode/
+buildspec*
+README.md
+local.sh
+.gitignore

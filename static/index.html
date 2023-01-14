@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>APIGolang - agustinlare</title>
+        <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/alerts.css">
+    </head>
+    <body>
+      <!-- TARJETAS -->
+      <div class="jumbotron">
+        <div class="container">
+          <h2>Swiss Army Knife</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                  <h4>Health</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <form action="/health">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Go</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- PING -->
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                  <h4>Ping</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <form action="/ping">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Go</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- UNHEALTH -->
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                  <h4>Unhealthy</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <form action="/unhealthy">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Go</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- PASSWORD -->
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                  <h4>Passwords</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <form action="/password">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary">Go</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Switch health check status -->
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                  <h4>Switch Healthcheck</h4>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <div class="custom-input-file">
+                        <form>
+                          {{ if .HealthStatus }}
+                          <button name="healthswitch" value="healthswitch" class="btn btn-success btn-sm" disabled>Status</button><br>
+                          {{else}}
+                          <button name="healthswitch" value="healthswitch" class="btn btn-danger btn-sm" disabled>Status</button><br>
+                          {{end}}
+                          <br>
+                          <button type="submit"  name="healthswitch" value="healthswitch" class="btn btn-sm btn-outline-secondary">Go</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
